@@ -1,0 +1,14 @@
+<section id="header-render">
+  <header class="header-menu">
+    <div class="menu">
+      <ul>
+        <li><a routerLink="home">HOME</a></li>
+        <li *ngFor="let menu of dataMenu">
+          <a [routerLink]="[menu.route]" (click)="checkOption(menu.title)">{{
+            menu.title.toUpperCase()
+          }}</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+</section>

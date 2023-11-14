@@ -1,0 +1,11 @@
+<section id="context-app">
+  <div class="app-wrap">
+
+    <app-header-render
+      (checkMenu)="getMenuRender($event)"
+      [dataMenu]="menuHeader"
+    ></app-header-render>
+
+    <router-outlet></router-outlet>
+  </div>
+</section>
