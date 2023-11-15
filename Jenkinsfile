@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs '19.0.0'
+        nodejs 'v19.0.0'
     }
 
     options {
@@ -38,11 +38,11 @@ pipeline {
             }
         }
 
-        stage('Deploy Simulation') {
+        stage('Deploy') {
             steps {
                 // Aquí puedes simular el despliegue, por ejemplo, copiar los archivos construidos a un directorio de destino
                 sh 'cp -r dist/*  home/daniel/Documents/desarrollo/angular/nba-app/deploy'
-            echo '¡El pipeline se ejecutó exitosamente! Puedes realizar acciones adicionales aquí.'
+                echo '¡El pipeline se ejecutó exitosamente! Puedes realizar acciones adicionales aquí.'
         }
         failure {
             echo 'El pipeline ha fallado. Realiza acciones de manejo de errores aquí si es necesario.'
