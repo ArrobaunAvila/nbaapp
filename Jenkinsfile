@@ -48,4 +48,6 @@ pipeline {
             echo 'El pipeline ha fallado. Realiza acciones de manejo de errores aquí si es necesario.'
         }
     }
+ }
 }
+
